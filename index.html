@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Chuyên Đề: Đổi Mới & Vị Thế Việt Nam</title>
+    <!-- Favicon (Updated: SVG Data URI for Vietnam Flag) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect width='900' height='600' fill='%23da251d'/%3E%3Cpath fill='%23ffcd00' d='M450 200l23 162h-98l23-162 49 152 144-48-124 88 48 147-124-89-124 89 48-147-124-88 144 48z' transform='translate(0,-30)'/%3E%3Cpolygon points='450,230 479,319 572,319 497,373 525,462 450,408 375,462 403,373 328,319 421,319' fill='%23ffcd00'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Logo with Flag on left -->
+            <a href="#hero" class="logo">
+                <img src="assets/vietnam-flag.svg" alt="VN Flag" class="header-flag">
+                <div class="logo-text">
+                    <span class="logo-top">HỒ SƠ CHUYÊN ĐỀ CQ</span>
+                    <span class="logo-sub">ĐỔI MỚI VÀ VỊ THẾ VIỆT NAM</span>
+                </div>
+            </a>
+
+            <!-- Nav -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Trang chủ</a></li>
+                    <li><a href="#history">Lịch sử</a></li>
+                    <li><a href="#evidence">Thành tựu</a></li>
+                    <li><a href="#challenge">Thách thức</a></li>
+                    <li><a href="#conclusion">Kết luận</a></li>
+                    <li><a href="#sources">Tư liệu</a></li>
+                </ul>
+            </nav>
+
+            <!-- Theme Toggle on far right -->
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" title="Chế độ Sáng/Tối">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="particles-container"></div>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-slideshow">
+            <div class="slide" style="background-image: url('assets/07_dai-hoi-xiv.jpg')"></div>
+            <div class="slide" style="background-image: url('assets/01_dai-hoi-viii.jpg')"></div>
+            <div class="slide" style="background-image: url('assets/02_dai-hoi-ix-quang-canh.jpg')"></div>
+            <div class="slide" style="background-image: url('assets/04_dai-hoi-xi.webp')"></div>
+            <div class="slide" style="background-image: url('assets/06_dai-hoi-xiii-be-mac.jpg')"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">CHUYÊN ĐỀ LỊCH SỬ ĐẢNG CỘNG SẢN VIỆT NAM</div>
+            <h1 class="hero-title">
+                HƠN 35 NĂM ĐỔI MỚI: <br>
+                CƠ ĐỒ, TIỀM LỰC, VỊ THẾ VÀ UY TÍN QUỐC TẾ CỦA VIỆT NAM NHÌN TỪ ĐẠI HỘI XIII
+            </h1>
+            <p class="hero-subtitle">
+                Một hồ sơ trực quan phân tích nhận định của Tổng Bí thư Nguyễn Phú Trọng bằng dữ liệu, sự kiện, văn kiện Đại hội và góc nhìn biện chứng.
+            </p>
+            <div class="hero-actions">
+                <a href="#timeline-section" class="btn btn-primary">XEM TIMELINE ĐẠI HỘI</a>
+                <a href="#conclusion" class="btn btn-outline">ĐỌC KẾT LUẬN NHÓM</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Quote & Question Section -->
+    <section id="quote-section" class="section-padding quote-section">
+        <div class="container">
+            <div class="quote-layout">
+                <div class="quote-text-col">
+                    <div class="quote-block">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <h2 class="quote-main">
+                            “Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay.”
+                        </h2>
+                        <p class="quote-desc">
+                            Nhận định này về cơ bản phản ánh một thực tế khách quan, nhưng chỉ đúng khi đặt trong so sánh lịch sử dài hạn và không tuyệt đối hóa thành tựu.
+                        </p>
+                    </div>
+                </div>
+                <div class="quote-img-col">
+                    <img src="assets/from-doc/12_quote-zing-xu-can-bo-khong-phai-vi-thu-oan-ai.png" alt="Tổng Bí thư Nguyễn Phú Trọng phát biểu" class="tbt-img">
+                </div>
+            </div>
+
+            <div class="question-box">
+                <h3 class="box-title">CÂU HỎI TRỌNG TÂM</h3>
+                <p>
+                    “Phát biểu tại Đại hội XIII, Tổng Bí thư Nguyễn Phú Trọng khẳng định: ‘Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay.’ Nhìn lại hơn 35 năm đổi mới, theo nhóm bạn, nhận định này phản ánh một thực tế khách quan hay còn có những thách thức, giới hạn cần nhìn nhận thấu đáo hơn? Hãy sử dụng dữ liệu, sự kiện và minh chứng cụ thể để chứng minh, phân tích hoặc phản biện nhận định trên.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Summary Argument -->
+    <section id="argument-summary" class="section-padding bg-light">
+        <div class="container">
+            <div class="summary-box">
+                <div class="summary-header">
+                    <h2>TÓM TẮT LẬP LUẬN TRUNG TÂM CỦA NHÓM</h2>
+                </div>
+                <div class="summary-content">
+                    <p>Nhận định <strong class="text-red">“Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”</strong> về cơ bản phản ánh một thực tế khách quan, nhưng chỉ đúng khi hiểu đó là một kết luận ở tầm tổng thể lịch sử, đặt trong so sánh với điểm xuất phát rất thấp của Việt Nam trước Đổi mới.</p>
+
+                    <p>Nó không nên được hiểu theo nghĩa tuyệt đối hóa, như thể mọi vấn đề phát triển đã được giải quyết xong hoặc đất nước đã phát triển thật sự bền vững trên mọi phương diện.</p>
+
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1986</span>
+                            <span class="stat-label">Khủng hoảng KTXH</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">774%</span>
+                            <span class="stat-label">Lạm phát năm 1986</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <span class="stat-label">Năm đổi mới</span>
+                        </div>
+                    </div>
+
+                    <p>Nếu đặt bên cạnh xuất phát điểm đó, thì việc Việt Nam thoát khủng hoảng, ổn định xã hội, mở cửa hội nhập và nâng tầm vị thế quốc tế là một bước chuyển lịch sử rất lớn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Timeline Section -->
+    <section id="history" class="section-padding timeline-bg">
+        <div id="timeline-section" class="container">
+            <h2 class="section-title text-center text-white" style="font-size: 2.5rem; text-shadow: 2px 2px 4px #000;">
+                <span style="font-size: 1.5rem; display: block; margin-bottom: 10px; font-family: 'Roboto', sans-serif; font-weight: 300;">NHỮNG</span>
+                CHẶNG ĐƯỜNG VẺ VANG <br> CỦA ĐẢNG
+            </h2>
+            <p class="section-subtitle text-center text-white-50">Hành trình 35 năm đổi mới và phát triển</p>
+
+            <div class="timeline-wrapper">
+                <!-- Timeline items rendered by JS -->
+                <div id="timeline-container" class="timeline-scroll">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+
+            <div id="timeline-detail-panel" class="timeline-detail hidden">
+                <!-- Detail content will be injected here -->
+                <div class="detail-content">
+                    <button class="close-detail" aria-label="Close detail">&times;</button>
+                    <div class="detail-grid">
+                        <div class="detail-img">
+                            <img src="" alt="" id="detail-image">
+                        </div>
+                        <div class="detail-text">
+                            <h3 id="detail-title"></h3>
+                            <p class="detail-years" id="detail-years"></p>
+                            <p class="detail-summary" id="detail-summary"></p>
+                            <ul class="detail-bullets" id="detail-bullets"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Part 1: Evidence -->
+    <section id="evidence" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">PHẦN 1: LUẬN CỨ CHỨNG MINH<br>NHẬN ĐỊNH CÓ CƠ SỞ KHÁCH QUAN</h2>
+
+            <!-- 10.1 Starting Point -->
+            <div class="evidence-block">
+                <h3>1. Điểm xuất phát rất thấp trước Đổi mới</h3>
+                <div class="content-row">
+                    <div class="text-col">
+                        <p>Năm 1986, đất nước rơi vào khủng hoảng kinh tế - xã hội nghiêm trọng. Hàng hóa khan hiếm, lạm phát tăng vọt.</p>
+                        <p>Đổi mới là đòi hỏi bức thiết của tình hình đất nước. Lạm phát tăng từ <strong>300% năm 1985</strong> lên <strong>774% năm 1986</strong>.</p>
+                    </div>
+                    <div class="img-col">
+                        <img src="assets/from-doc/13_chart-tang-truong-kinh-te-giam-ngheo-1986-1993.png" alt="Biểu đồ kinh tế" class="evidence-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10.2 Achievements -->
+            <div class="evidence-block alt-bg">
+                <h3>2. Thành tựu kinh tế - xã hội</h3>
+                <p>Về thành tựu kinh tế - xã hội, nhận định trên có cơ sở khá rõ. Chính giáo trình khẳng định sau hơn 30 năm Đổi mới, Việt Nam đã chuyển từ cơ chế kế hoạch hóa tập trung, quan liêu, bao cấp sang nền kinh tế hàng hóa nhiều thành phần vận hành theo cơ chế thị trường có sự quản lý của Nhà nước.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="number">481 USD</div>
+                        <div class="label">GDP đầu người 1986</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><i class="fas fa-arrow-up"></i></div>
+                        <div class="number">2.655 USD</div>
+                        <div class="label">GDP đầu người 2020<br>(Theo giá 2015)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="number">10 Triệu+</div>
+                        <div class="label">Người thoát nghèo<br>(2010-2020)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10.3 Potential -->
+            <div class="evidence-block">
+                <h3>3. Cơ đồ và tiềm lực quốc gia</h3>
+                <p>Việt Nam đã trở thành một nền kinh tế năng động, có sức hút đáng kể với bên ngoài. Không còn là một nền kinh tế đóng kín hay đứng ngoài các chuỗi liên kết toàn cầu.</p>
+                <div class="highlight-info">
+                    <p>Tính đến cuối năm 2024:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>42.002</strong> dự án FDI còn hiệu lực.</li>
+                        <li><i class="fas fa-check-circle"></i> Tổng vốn đăng ký khoảng <strong>502,8 tỷ USD</strong>.</li>
+                        <li><i class="fas fa-check-circle"></i> Vốn thực hiện 2024 ước đạt <strong>25,35 tỷ USD</strong> (tăng 9,4%).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 10.4 Position -->
+            <div class="evidence-block alt-bg">
+                <h3>4. Vị thế và uy tín quốc tế</h3>
+                <p>Nếu so với một Việt Nam từng bị bao vây, cấm vận và cô lập, thì “vị thế” và “uy tín quốc tế” hôm nay là một bước tiến lớn.</p>
+
+                <div class="position-cards">
+                    <div class="p-card">
+                        <h4>194</h4>
+                        <p>Quốc gia có quan hệ ngoại giao</p>
+                    </div>
+                    <div class="p-card">
+                        <h4>17</h4>
+                        <p>Hiệp định thương mại tự do (FTA)</p>
+                    </div>
+                    <div class="p-card">
+                        <h4>42</h4>
+                        <p>Đối tác toàn diện hoặc cao hơn</p>
+                    </div>
+                    <div class="p-card special">
+                        <h4>TOP 15</h4>
+                        <p>Nền thương mại lớn nhất thế giới (2025)</p>
+                    </div>
+                </div>
+                <p class="source-note">Thành viên <strong>Hội đồng Nhân quyền LHQ (2026-2028)</strong>. Quan hệ <strong>Đối tác chiến lược toàn diện</strong> với cả 5 nước thường trực HĐBA LHQ.</p>
+            </div>
+
+            <!-- 10.5 Innovation -->
+            <div class="evidence-block">
+                <h3>5. Năng lực đổi mới sáng tạo</h3>
+                <p>Theo WIPO, Việt Nam đứng thứ <strong>44/133</strong> nền kinh tế trong Global Innovation Index 2024, xếp thứ <strong>2</strong> trong nhóm nước thu nhập trung bình thấp.</p>
+                <p>Đây là một dấu hiệu cho thấy “tiềm lực” của Việt Nam không chỉ nằm ở thương mại đơn thuần, mà còn ở năng lực công nghệ và khả năng thích ứng với sự biến đổi của thời đại.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. Part 2: Challenges -->
+    <section id="challenge" class="section-padding section-dark">
+        <div class="container">
+            <h2 class="section-title text-center text-white">PHẦN 2: NHỮNG THÁCH THỨC, GIỚI HẠN<br>CẦN NHÌN NHẬN THẤU ĐÁO</h2>
+            <p class="section-subtitle text-center text-white-50">Nếu chỉ dừng ở mặt khẳng định mà không nhìn rõ giới hạn, nhận định trên sẽ trở nên một chiều.</p>
+
+            <div class="challenge-grid">
+                <div class="challenge-item">
+                    <div class="c-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>Chất lượng tăng trưởng</h4>
+                    <p>Tiềm lực kinh tế lớn hơn trước nhưng chất lượng phát triển chưa thật vững. Năng suất lao động và sức cạnh tranh còn là vấn đề. Hội nhập sâu tạo sức ép cạnh tranh gay gắt.</p>
+                </div>
+                <div class="challenge-item">
+                    <div class="c-icon"><i class="fas fa-battery-half"></i></div>
+                    <h4>Nội lực chưa đủ mạnh</h4>
+                    <p>Vị thế quốc tế tăng nhưng Việt Nam vẫn là nước thu nhập trung bình thấp trong giai đoạn chuyển tiếp. Còn chặng đường dài để lên thu nhập trung bình cao (2030) và thu nhập cao (2045).</p>
+                </div>
+                <div class="challenge-item">
+                    <div class="c-icon"><i class="fas fa-temperature-high"></i></div>
+                    <h4>Biến đổi khí hậu</h4>
+                    <p>Việt Nam là một trong những quốc gia chịu ảnh hưởng mạnh nhất. Năm 2020 thiệt hại khoảng 10 tỷ USD (3,2% GDP). WB cảnh báo tác động có thể làm giảm 12,5% GDP vào năm 2050.</p>
+                </div>
+                <div class="challenge-item">
+                    <div class="c-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>Công nghệ lõi</h4>
+                    <p>Chưa có cụm khoa học - công nghệ nào nằm trong Top 100 toàn cầu năm 2024. Cần chuyển mạnh hơn sang tăng trưởng dựa vào năng suất, tri thức và công nghệ lõi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Conclusion -->
+    <section id="conclusion" class="section-padding conclusion-bg">
+        <div class="container">
+            <div class="conclusion-box">
+                <h2 class="text-center text-red">KẾT LUẬN BIỆN CHỨNG CỦA NHÓM</h2>
+                <div class="conclusion-content">
+                    <p>Nhận định của Tổng Bí thư là đúng về xu thế lớn và đúng trong so sánh lịch sử dài hạn. Việt Nam hôm nay rõ ràng có quy mô kinh tế lớn hơn, đời sống dân cư tốt hơn, mạng lưới đối ngoại rộng hơn, mức độ hội nhập sâu hơn và uy tín quốc tế cao hơn rất nhiều so với giai đoạn trước Đổi mới.</p>
+
+                    <p>Nhưng nhận định ấy chỉ thật sự thuyết phục khi đi kèm tinh thần nhìn thẳng vào sự thật: tăng trưởng chưa hoàn toàn bền vững, nội lực khoa học - công nghệ còn hạn chế, bất bình đẳng và các vấn đề xã hội chưa được giải quyết triệt để.</p>
+
+                    <div class="conclusion-final">
+                        <i class="fas fa-star star-icon"></i>
+                        <p><strong>ĐÂY LÀ MỘT NHẬN ĐỊNH ĐÚNG, NHƯNG PHẢI ĐƯỢC HIỂU THEO TINH THẦN BIỆN CHỨNG.</strong><br>
+                        Thành tựu to lớn và có ý nghĩa lịch sử là rất rõ ràng; song chính vì thế càng không được chủ quan, tự mãn.</p>
+
+                        <p>Nhiệm vụ của giai đoạn tới không chỉ là giữ vững cơ đồ, tiềm lực, vị thế mà còn phải chuyển hóa chúng thành chất lượng phát triển cao hơn, tự chủ hơn, bền vững hơn và công bằng hơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Sources -->
+    <section id="sources" class="section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title-sm">TƯ LIỆU THAM KHẢO & DẪN CHỨNG</h3>
+            <div class="sources-grid">
+                <div class="source-col">
+                    <h4><i class="fas fa-book"></i> Văn kiện & Báo Đảng</h4>
+                    <ul>
+                        <li>Nghị quyết Đại hội XIII, XIV</li>
+                        <li>Trang tin Đại hội Đảng toàn quốc</li>
+                        <li>Báo Nhân Dân, Quân đội Nhân dân</li>
+                    </ul>
+                </div>
+                <div class="source-col">
+                    <h4><i class="fas fa-landmark"></i> Nguồn Nhà nước</h4>
+                    <ul>
+                        <li>Bộ Kế hoạch và Đầu tư (MPI)</li>
+                        <li>Bộ Ngoại giao Việt Nam</li>
+                    </ul>
+                </div>
+                <div class="source-col">
+                    <h4><i class="fas fa-globe"></i> Nguồn Quốc tế</h4>
+                    <ul>
+                        <li>World Bank (WB)</li>
+                        <li>WIPO (Global Innovation Index)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 NHÓM THỰC HIỆN ĐỀ TÀI CQ - MÔN LỊCH SỬ ĐẢNG CỘNG SẢN VIỆT NAM</p>
+                <p>Website phục vụ mục đích học tập và thuyết trình.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Lên đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
