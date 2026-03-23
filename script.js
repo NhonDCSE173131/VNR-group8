@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'viii',
           label: 'Đại hội VIII',
           year: '1996 - 2001',
-          image: 'assets/from-doc/01_dai-hoi-viii-historic.png',
+          image: 'assets/01_dai-hoi-viii-historic.png',
           summary: 'Đánh dấu bước chuyển quan trọng sang thời kỳ đẩy mạnh công nghiệp hoá, hiện đại hoá đất nước.',
           bullets: [
             'Rút ra 6 bài học lớn từ 10 năm đổi mới.',
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'ix',
           label: 'Đại hội IX',
           year: '2001 - 2006',
-          image: 'assets/from-doc/02_dai-hoi-ix-quang-canh.png',
+          image: 'assets/02_dai-hoi-ix-quang-canh.png',
           summary: 'Bước phát triển quan trọng về nhận thức lý luận của Đảng trong thời kỳ đổi mới.',
           bullets: [
             'Làm rõ con đường quá độ lên chủ nghĩa xã hội bỏ qua chế độ tư bản chủ nghĩa.',
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'x',
           label: 'Đại hội X',
           year: '2006 - 2011',
-          image: 'assets/from-doc/04_dai-hoi-x-bo-phieu.png',
+          image: 'assets/04_dai-hoi-x-bo-phieu.png',
           summary: 'Nhấn mạnh đẩy mạnh toàn diện công cuộc đổi mới sau 20 năm thực hiện.',
           bullets: [
             'Bổ sung nhận thức về CNXH: dân chủ, công bằng, văn minh, Nhà nước pháp quyền XHCN.',
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'xi',
           label: 'Đại hội XI',
           year: '2011 - 2015',
-          image: 'assets/from-doc/05_dai-hoi-xi-quang-canh.png',
+          image: 'assets/05_dai-hoi-xi-quang-canh.png',
           summary: 'Thông qua Cương lĩnh bổ sung, phát triển năm 2011 và Chiến lược phát triển KTXH 2011-2020.',
           bullets: [
             'Xác định rõ hơn mô hình xã hội xã hội chủ nghĩa.',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'xii',
           label: 'Đại hội XII',
           year: '2016 - 2018',
-          image: 'assets/from-doc/06_dai-hoi-xii-tong-bi-thu-nguyen-phu-trong.png',
+          image: 'assets/06_dai-hoi-xii-tong-bi-thu-nguyen-phu-trong.png',
           summary: 'Khẳng định phải đẩy mạnh toàn diện, đồng bộ công cuộc đổi mới.',
           bullets: [
             'Nhấn mạnh nhiệm vụ đổi mới mô hình tăng trưởng, cơ cấu lại nền kinh tế.',
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'xiii',
           label: 'Đại hội XIII',
           year: '2021',
-          image: 'assets/from-doc/07_dai-hoi-xiii-tong-bi-thu-nguyen-phu-trong.png',
+          image: 'assets/07_dai-hoi-xiii-tong-bi-thu-nguyen-phu-trong.png',
           summary: 'Bước phát triển mới trong tư duy lãnh đạo, khát vọng phát triển đất nước phồn vinh, hạnh phúc.',
           bullets: [
             'Tiếp tục đẩy mạnh toàn diện, đồng bộ công cuộc đổi mới.',
