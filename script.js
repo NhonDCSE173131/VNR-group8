@@ -225,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const section = document.getElementById(sectionId);
             if (section) {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
                 
                 if (window.scrollY >= (sectionTop - 300)) {
                     current = sectionId;
@@ -314,24 +313,105 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------------------
-    // 6. BACK TO TOP BUTTON
+    // 6. BACK TO TOP BUTTON & QUICK NAV PILL
     // -------------------------------------------------------------------------
     const backToTopBtn = document.getElementById('back-to-top');
+    const quickNavPill = document.getElementById('quick-nav-pill');
+    const quickNavLinks = document.querySelectorAll('.quick-nav-pill a');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
+    // Auto-Hide / Show on Activity Logic
+    let isScrolling;
+    let isHovering = false;
+    const hideDelay = 500; // Hide after 0.5 seconds of inactivity
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    function showQuickNav() {
+        if (!backToTopBtn || !quickNavPill) return;
+
+        // Only activate if scrolled past 500px
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('show');
+            quickNavPill.classList.add('show');
+            
+            // Clear existing timeout
+            clearTimeout(isScrolling);
+            
+            // Only set hide timeout if NOT hovering
+            if (!isHovering) {
+                isScrolling = setTimeout(() => {
+                    if (!isHovering) { // Double check before hiding
+                        backToTopBtn.classList.remove('show');
+                        quickNavPill.classList.remove('show');
+                    }
+                }, hideDelay);
+            }
+        } else {
+            // Always hide if near top
+            backToTopBtn.classList.remove('show');
+            quickNavPill.classList.remove('show');
+        }
+    }
+
+    // Trigger on Scroll
+    window.addEventListener('scroll', () => {
+        showQuickNav();
+        updateQuickNav(); 
+    });
+    
+    // Trigger on Mouse Move
+    window.addEventListener('mousemove', () => {
+        showQuickNav();
+    });
+    
+    // Prevent hiding while hovering over controls
+    const controls = [quickNavPill, backToTopBtn];
+    controls.forEach(control => {
+        if(!control) return;
+        control.addEventListener('mouseenter', () => {
+            isHovering = true;
+            clearTimeout(isScrolling);
+            control.classList.add('show'); 
+        });
+        control.addEventListener('mouseleave', () => {
+             isHovering = false;
+             showQuickNav(); // Restart hide logic immediately
         });
     });
+
+    // Quick Nav Active State Spy
+    function updateQuickNav() {
+        let current = '';
+        const sections = ['hero', 'history', 'evidence', 'challenge', 'conclusion', 'sources'];
+        
+        sections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                // Offset adjustment for pill which is at bottom
+                if (window.scrollY >= (sectionTop - 300)) {
+                    current = sectionId;
+                }
+            }
+        });
+
+        quickNavLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href').replace('#', '');
+            if (href === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', updateQuickNav);
+
+    if(backToTopBtn) { // Safety check
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    } 
 
     // -------------------------------------------------------------------------
     // 7. FIRE PARTICLES ANIMATION

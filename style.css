@@ -1075,3 +1075,110 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
     color: var(--gold);
 }
+
+/* Quick Navigation Pill */
+.quick-nav-pill {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%) translateX(-100px); /* Initially hidden to the left */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column; /* Vertical Layout */
+    gap: 20px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold);
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .quick-nav-pill {
+    background: rgba(30, 30, 30, 0.9);
+    border-color: var(--gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.quick-nav-pill.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+.quick-nav-pill a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.quick-nav-pill a:hover,
+.quick-nav-pill a.active {
+    color: var(--primary-red);
+    background: rgba(206, 25, 25, 0.1); /* Subtle red bg on hover */
+    transform: scale(1.2);
+}
+
+body.dark-mode .quick-nav-pill a:hover,
+body.dark-mode .quick-nav-pill a.active {
+    color: var(--gold);
+    background: rgba(255, 204, 0, 0.1);
+}
+
+/* Tooltip on hover (Desktop: Left side means tooltip goes Right) */
+.quick-nav-pill a::after {
+    content: attr(title);
+    position: absolute;
+    left: 140%; /* Position to the right */
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.quick-nav-pill a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Responsive: Mobile Styles for Quick Nav Pill */
+@media (max-width: 768px) {
+    .quick-nav-pill {
+        top: auto;
+        left: 50%;
+        bottom: 30px;
+        flex-direction: row; /* Back to horizontal */
+        padding: 10px 25px;
+        border-radius: 50px;
+        transform: translateX(-50%) translateY(50px);
+    }
+
+    .quick-nav-pill.show {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Hide tooltips on mobile to avoid clutter */
+    .quick-nav-pill a::after {
+        display: none;
+    }
+}
+
