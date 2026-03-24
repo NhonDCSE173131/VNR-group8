@@ -386,7 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const section = document.getElementById(sectionId);
             if (section) {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
                 // Offset adjustment for pill which is at bottom
                 if (window.scrollY >= (sectionTop - 300)) {
                     current = sectionId;
